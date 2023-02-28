@@ -1,9 +1,104 @@
-body {
-	background-color: royalblue;
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
-p {
-	font-size: 50px;
-	color: gold;
-	text-align: center;
+body {
+	font-family: 'Nunito', sans-serif;
+	background-color: #333;
+	font-size: 36px;
+	color: #fff;
+}
+
+button {
+	position: absolute;
+	width: 120px;
+	top: 50px;
+	cursor: pointer;
+	transform: translateX(-50%);
+	padding: 10px 30px;
+	background-color: transparent;
+	color: white;
+	border: solid white;
+	border-radius: 5px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	transition: 0.3s;
+}
+
+.btn-zoom {
+	left: 25%;
+}
+
+.btn-move {
+	left: 50%;
+}
+
+.btn-color {
+	left: 75%;
+}
+
+.btn-zoom:hover {
+	background-color: white;
+	color: black;
+}
+
+.btn-move:hover {
+	background-color: white;
+	color: black;
+}
+
+.btn-color:hover {
+	background-color: white;
+	color: black;
+}
+
+.square {
+	position: absolute;
+	top: 150px;
+	width: 100px;
+	height: 100px;
+	transform: translateX(-50%);
+	border-radius: 25px;
+	transition: .5s;
+}
+
+.blue {
+	left: 25%;
+	background-color: royalblue;
+	box-shadow: 0 0 30px royalblue;
+	border: darkblue solid 2px;
+}
+
+.green {
+	left: 50%;
+	background-color: greenyellow;
+	box-shadow: 0 0 30px greenyellow;
+	border: darkgreen solid 2px;
+}
+
+.red {
+	left: 75%;
+	background-color: tomato;
+	box-shadow: 0 0 30px tomato;
+	border: darkred solid 2px;
+}
+
+.btn-zoom:hover ~ .square {
+	width: 200px;
+	height: 200px;
+	/* transition: .5s, .5s; */
+}
+
+.btn-move:hover ~ .square {
+	top: 500px;
+	/* transition: .5s; */
+}
+
+.btn-color:hover ~ .square {
+	background-color: black;
+	box-shadow: 0 0 30px black;
+	border: white solid 2px;
+	/* transition: .5s; */
 }
